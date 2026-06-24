@@ -15,4 +15,5 @@ router.register("experience", ExperienceViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('terminal/', include("terminal.urls")),
 ]
