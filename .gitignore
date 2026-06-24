@@ -12,3 +12,5 @@ media/
 .vscode/
 
 node_modules/
+
+*.jpg
