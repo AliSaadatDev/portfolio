@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ReadOnlyModelViewSet
+from .models import Experience
+from .serializers import ExperienceSerializer
 
-# Create your views here.
+class ProfileViewSet(ReadOnlyModelViewSet):
+    queryset = Experience.objects.all()
+    serializer_class = ExperienceSerializer
