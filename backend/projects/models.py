@@ -6,7 +6,7 @@ class Project(models.Model):
     )
     description = models.TextField()
     skills = models.ManyToManyField(
-        "skills.skill"
+        "skills.Skills"
     )
     github_url = models.URLField()
 
