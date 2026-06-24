@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
-# Create your views here.
+from .engine import run_command
+
+
+@api_view(["POST"])
+def terminal_execute(request):
+
+    command = request.data.get("command", "")
+
+    result = run_command(command)
+
+    return Response(result)
