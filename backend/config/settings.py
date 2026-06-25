@@ -126,8 +126,8 @@ STATIC_URL = 'static/'
 
 
 # Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/profile/'
+MEDIA_ROOT = BASE_DIR / ''
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
