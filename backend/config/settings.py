@@ -25,10 +25,7 @@ SECRET_KEY = 'django-insecure-a!k$&kes^)&s%ryd8)x_=$oak0+9vy!3=5m9p*&)&y@m8^-4dr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'backendalisad.vercel.app',
-    'alisaadat.vercel.app',
-]
+ALLOWED_HOSTS = ['*']
 
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
