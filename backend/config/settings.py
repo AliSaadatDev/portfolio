@@ -137,10 +137,12 @@ MEDIA_ROOT = BASE_DIR / ''
 CORS_ALLOWED_ORIGINS = [
     "http://alisaadat.vercel.app",
     "https://alisaadat.vercel.app",
+    "https://backendalisad-8igygqlws-zero-bit.vercel.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://alisaadat.vercel.app",
+    "https://backendalisad-8igygqlws-zero-bit.vercel.app",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
