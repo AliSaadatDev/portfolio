@@ -65,7 +65,7 @@ export default function Terminal() {
         </div>
         <div className="output-area">
           <p className="welcome-msg">
-            Welcome to Ali Saadat's portfolio.{" "}
+            Welcome to Ali Saadat portfolio.{" "}
             <span className="welcome-hint">
               Type a command or click one above.
             </span>
