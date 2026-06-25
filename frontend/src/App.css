@@ -228,3 +228,15 @@ html, body, #root {
   .help-grid { grid-template-columns: repeat(2, 1fr); }
   .output-area { max-height: none; min-height: 60vh; }
 }
+
+/* ── Entry animation ── */
+.entry {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.entry-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

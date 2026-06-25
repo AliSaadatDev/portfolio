@@ -4,6 +4,29 @@ import OutputRenderer from "./OutputRenderer";
 
 const PROMPT = "visitor@portfolio ~ $";
 
+function AnimatedEntry({ entry, onCommand }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 30);
+    return () => clearTimeout(t);
+  }, []);
+
+  return (
+    <div className={`entry ${visible ? "entry-visible" : ""}`}>
+      {entry.type === "input" && (
+        <p className="prompt-line">
+          <span className="prompt-prefix">{PROMPT}</span>{" "}
+          <span className="prompt-cmd">{entry.value}</span>
+        </p>
+      )}
+      {entry.type === "output" && (
+        <OutputRenderer payload={entry.payload} onCommand={onCommand} />
+      )}
+    </div>
+  );
+}
+
 export default function Terminal() {
   const { history, loading, runCommand, navigateHistory } = useTerminal();
   const [inputVal, setInputVal] = useState("");
@@ -48,20 +71,7 @@ export default function Terminal() {
             </span>
           </p>
           {history.map((entry, i) => (
-            <div key={i}>
-              {entry.type === "input" && (
-                <p className="prompt-line">
-                  <span className="prompt-prefix">{PROMPT}</span>{" "}
-                  <span className="prompt-cmd">{entry.value}</span>
-                </p>
-              )}
-              {entry.type === "output" && (
-                <OutputRenderer
-                  payload={entry.payload}
-                  onCommand={runCommand}
-                />
-              )}
-            </div>
+            <AnimatedEntry key={i} entry={entry} onCommand={runCommand} />
           ))}
           {loading && (
             <p className="loading-line">
