@@ -5,6 +5,8 @@ from profiles.views import ProfileViewSet
 from skills.views import SkillsViewSet
 from projects.views import ProjectsViewSet
 from experience.views import ExperienceViewSet
+from django.conf.urls.static import static
+from django.conf import settings
 
 router = DefaultRouter()
 router.register("profile", ProfileViewSet)
@@ -16,4 +18,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('terminal/', include("terminal.urls")),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
