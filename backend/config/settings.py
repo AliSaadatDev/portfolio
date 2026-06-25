@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '.vervel.app',
+    'backendalisad-f0xncqu9x-zero-bit.vercel.app/',
     'backendalisad.vercel.app',
     'alisaadat.vercel.app',
-    'backendalisad-8igygqlws-zero-bit.vercel.app',
 ]
 
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
