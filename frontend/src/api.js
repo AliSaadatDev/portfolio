@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "http://backendalisad.vercel.app";
 
 export async function executeCommand(command) {
   const res = await fetch(`${BASE_URL}/terminal/execute/`, {
