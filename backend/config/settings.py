@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'backendalisad.vercel.app',
+    'http://alisaadat.vercel.app,',
+    'https://alisaadat.vercel.app',
+    'alisaadat.vercel.app',
 ]
 
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
@@ -133,6 +136,6 @@ MEDIA_URL = '/profile/'
 MEDIA_ROOT = BASE_DIR / ''
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "http://alisaadat.vercel.app",
+    "https://alisaadat.vercel.app",
 ]
