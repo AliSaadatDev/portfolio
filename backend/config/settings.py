@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'backendalisad.vercel.app',
-    'http://alisaadat.vercel.app,',
-    'https://alisaadat.vercel.app',
     'alisaadat.vercel.app',
 ]
 
@@ -139,3 +137,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://alisaadat.vercel.app",
     "https://alisaadat.vercel.app",
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://alisaadat.vercel.app",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
