@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'backendalisad.vercel.app',
 ]
 
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
 # Application definition
 
