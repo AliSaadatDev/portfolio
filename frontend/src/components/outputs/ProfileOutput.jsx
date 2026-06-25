@@ -1,4 +1,4 @@
-const BASE = "http://backendalisad.vercel.app";
+const BASE = "https://backendalisad.vercel.app";
 
 export default function ProfileOutput({ data }) {
   return (

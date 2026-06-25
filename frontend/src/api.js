@@ -1,4 +1,4 @@
-const BASE_URL = "http://backendalisad.vercel.app";
+const BASE_URL = "https://backendalisad.vercel.app";
 
 export async function executeCommand(command) {
   const res = await fetch(`${BASE_URL}/terminal/execute/`, {
